@@ -1,0 +1,20 @@
+/public/
+/resources/_gen/
+/.hugo_build.lock
+/.DS_Store
+# 忽略主题的 .git 目录（如果你用 git submodule add 方式添加主题）
+/themes/*/
+# macOS特有
+.AppleDouble
+.LSOverride
+# Windows特有
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+# JetBrains IDEs
+.idea/
+# VS Code
+.vscode/
+bin/
+AGENTS.md
+CLAUDE.md

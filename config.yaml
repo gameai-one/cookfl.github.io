@@ -1,0 +1,4 @@
+baseURL: '/'
+languageCode: 'zh-cn'
+title: '我的技术博客'
+theme: hugo-book
