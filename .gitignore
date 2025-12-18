@@ -15,6 +15,7 @@ Desktop.ini
 .idea/
 # VS Code
 .vscode/
+.tmp/
 bin/
 AGENTS.md
 CLAUDE.md

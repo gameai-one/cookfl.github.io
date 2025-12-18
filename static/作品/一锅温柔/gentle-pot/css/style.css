@@ -1,0 +1,185 @@
+/* 一锅温柔 - 互动诗歌样式 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Serif SC', 'STSong', serif;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* 背景图层 */
+#background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+#background-image.visible {
+    opacity: 1;
+}
+
+/* 颜色覆盖层（情绪滤镜） */
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    transition: background 2s ease-in-out;
+    pointer-events: none;
+}
+
+/* 春 - 清澈透明 */
+.overlay-spring {
+    background: rgba(180, 220, 240, 0.2) !important;
+}
+
+/* 冬 - 冷灰 */
+.overlay-winter {
+    background: rgba(100, 110, 120, 0.4) !important;
+}
+
+/* 秋 - 温暖金色 */
+.overlay-autumn {
+    background: rgba(255, 200, 120, 0.25) !important;
+}
+
+/* 文本层 */
+#text-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    max-width: 80%;
+    text-align: center;
+    pointer-events: none;
+}
+
+#poem-text {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    line-height: 1.8;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    letter-spacing: 0.1em;
+}
+
+#poem-text.visible {
+    opacity: 1;
+}
+
+/* 触摸提示 */
+#touch-hint {
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#touch-hint.visible {
+    opacity: 1;
+}
+
+#touch-hint p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.2em;
+}
+
+.pulse {
+    display: inline-block;
+    font-size: 1.5rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* 进度指示器 */
+#progress-indicator {
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    z-index: 20;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.5);
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+    #poem-text {
+        font-size: clamp(1.2rem, 5vw, 2rem);
+        max-width: 90%;
+    }
+
+    #touch-hint p {
+        font-size: 0.9rem;
+    }
+}
+
+/* 渐变过渡效果 */
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

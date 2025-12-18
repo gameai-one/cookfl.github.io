@@ -1,4 +1,20 @@
-baseURL: '/'
-languageCode: 'zh-cn'
-title: '我的技术博客'
-theme: hugo-book
+baseURL: "https://gameai.one/"
+languageCode: "zh-cn"
+title: "GameAI.One"
+theme: "hugo-book"
+
+params:
+  description: "深度思考，沉淀AI与游戏的认知坐标，探索进化路径"
+  author: "Cookfl"
+
+menu:
+  main:
+    - name: "思考"
+      url: "/思考/"
+      weight: 1
+    - name: "作品"
+      url: "/作品/"
+      weight: 2
+    - name: "关于"
+      url: "/关于/"
+      weight: 3

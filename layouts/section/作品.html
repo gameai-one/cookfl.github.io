@@ -1,0 +1,40 @@
+{{ define "main" }}
+  <article class="markdown book-article">
+    {{- with .Content }}
+      <div class="markdown-inner">
+        {{ . }}
+      </div>
+      <hr>
+    {{- end }}
+
+    {{- $projects := .Paginate (sort .Pages "Date" "desc") }}
+    {{- range $projects.Pages }}
+    <section class="book-post markdown">
+      <h2>
+        <a href="{{ .RelPermalink }}">{{ partial "docs/title" . }}</a>
+      </h2>
+      {{ with .Params.subtitle }}
+        <p class="text-small">{{ . }}</p>
+      {{ end }}
+      <div class="flex gap">
+        <div>
+          {{ partial "docs/post-meta" . }}
+          <div class="book-post-content markdown-inner">
+            {{- .Summary | truncate 240 -}}
+          </div>
+        </div>
+      </div>
+    </section>
+    {{- else }}
+    <p>还没有发布的作品，敬请期待。</p>
+    {{- end }}
+  </article>
+{{ end }}
+
+{{ define "toc-container" }}{{ end }}
+
+{{ define "footer" }}
+  {{ if gt .Paginator.TotalPages 1 }}
+    {{ partial "docs/pagination.html" . }}
+  {{ end }}
+{{ end }}
