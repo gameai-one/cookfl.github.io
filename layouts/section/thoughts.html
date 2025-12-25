@@ -7,8 +7,8 @@
       <hr>
     {{- end }}
 
-    {{- $projects := .Paginate (sort .Pages "Date" "desc") }}
-    {{- range $projects.Pages }}
+    {{- $entries := .Paginate (sort .RegularPages "Date" "desc") }}
+    {{- range $entries.Pages }}
     <section class="book-post markdown">
       <h2>
         <a href="{{ .RelPermalink }}">{{ partial "docs/title" . }}</a>
@@ -26,7 +26,11 @@
       </div>
     </section>
     {{- else }}
-    <p>还没有发布的作品，敬请期待。</p>
+    {{- if eq .Site.Language.Lang "zh" }}
+    <p>还没有发布的思考，敬请期待。</p>
+    {{- else }}
+    <p>No thoughts published yet. Stay tuned.</p>
+    {{- end }}
     {{- end }}
   </article>
 {{ end }}

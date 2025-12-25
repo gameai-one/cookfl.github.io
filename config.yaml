@@ -1,20 +1,41 @@
 baseURL: "https://gameai.one/"
-languageCode: "zh-cn"
+defaultContentLanguage: "en"
 title: "GameAI.One"
 theme: "hugo-book"
 
-params:
-  description: "深度思考，沉淀AI与游戏的认知坐标，探索进化路径"
-  author: "Cookfl"
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    params:
+      description: "Exploring AI and games through deep thinking, practical tools, and experiments"
+      author: "Cookfl"
+    menu:
+      main:
+        - name: "Thoughts"
+          pageRef: "/thoughts/"
+          weight: 1
+        - name: "Works"
+          pageRef: "/works/"
+          weight: 2
+        - name: "About"
+          pageRef: "/about/"
+          weight: 3
 
-menu:
-  main:
-    - name: "思考"
-      url: "/思考/"
-      weight: 1
-    - name: "作品"
-      url: "/作品/"
-      weight: 2
-    - name: "关于"
-      url: "/关于/"
-      weight: 3
+  zh:
+    languageName: "中文"
+    weight: 2
+    params:
+      description: "深度思考，沉淀AI与游戏的认知坐标，探索进化路径"
+      author: "Cookfl"
+    menu:
+      main:
+        - name: "思考"
+          pageRef: "/thoughts/"
+          weight: 1
+        - name: "作品"
+          pageRef: "/works/"
+          weight: 2
+        - name: "关于"
+          pageRef: "/about/"
+          weight: 3

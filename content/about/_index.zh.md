@@ -17,7 +17,7 @@ date: 2025-12-18
 
 用真实的FPV航拍素材，探索温柔、距离与融合。
 
-[体验作品 →](/作品/一锅温柔)
+[体验作品 →]({{< relref "works/gentle-pot.md" >}})
 
 ---
 
@@ -46,8 +46,8 @@ date: 2025-12-18
 
 ## 联系
 
-- GitHub: [github.com/gameai-one]
-- Email: hello@gameai.one
+- GitHub: {{< site-link key="github" >}}
+- Email: {{< site-link key="email" >}}
 
 ---
 

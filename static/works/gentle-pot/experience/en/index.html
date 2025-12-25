@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>A Gentle Pot | Interactive Poetry</title>
+    <meta name="description" content="An interactive poem about tenderness, distance, and the desire to merge.">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Background layers -->
+    <div id="background-container">
+        <img id="background-image" src="" alt="">
+        <div id="overlay"></div>
+    </div>
+
+    <!-- Text layer -->
+    <div id="text-container">
+        <p id="poem-text"></p>
+    </div>
+
+    <!-- Touch hint -->
+    <div id="touch-hint">
+        <p>Tap the screen</p>
+        <span class="pulse">◉</span>
+    </div>
+
+    <!-- Progress indicator -->
+    <div id="progress-indicator">
+        <span class="dot" data-chapter="0"></span>
+        <span class="dot" data-chapter="1"></span>
+        <span class="dot" data-chapter="2"></span>
+    </div>
+
+    <script src="../js/main.en.js"></script>
+</body>
+</html>

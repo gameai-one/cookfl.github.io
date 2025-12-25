@@ -5,17 +5,39 @@ layout: "home"
 
 # gameai.one
 
-一个人。  
-一锅温柔。  
-一个游戏。  
-一个梦。
+One person.
+One gentle pot.
+One game.
+One dream.
 
-深度思考，沉淀 AI 与游戏的认知坐标，探索进化路径。
+Exploring the intersection of AI and games through deep thinking, practical tools, and experimental projects.
 
 ---
 
-## 导航
+## Navigation
 
-- [思考](/思考/)：沉淀方法论与长期视角
-- [作品](/作品/)：互动体验与实验项目
-- [关于](/关于/)：创作者与愿景
+- [Thoughts]({{< relref "thoughts/_index.md" >}}): Long-term perspectives and methodologies
+- [Works]({{< relref "works/_index.md" >}}): Interactive experiments and projects
+- [About]({{< relref "about/_index.md" >}}): Creator and vision
+
+---
+
+## Unity Shaders & Tools
+
+I create production-ready Unity shaders and AI-powered tools, shared freely on:
+
+- **Asset Store**: Free shaders and tools
+- **GitHub**: Open-source code
+- **Tutorials**: Video guides and articles (Chinese & English)
+
+{{< site-link key="asset_store_publisher" text="View My Asset Store →" >}}
+
+---
+
+## Latest Content
+
+Coming soon: Shader tutorials, AI integration guides, and game development insights.
+
+---
+
+*Built with curiosity, shared with passion.*

@@ -1,6 +1,8 @@
 ---
 title: "一锅温柔"
 subtitle: "互动诗歌 · 第一个作品"
+slug: "gentle-pot"
+translationKey: "gentle-pot"
 date: 2025-12-18
 type: "project"
 tags: ["互动诗歌", "FPV", "Web艺术"]
@@ -12,7 +14,7 @@ tags: ["互动诗歌", "FPV", "Web艺术"]
 
 用真实的FPV航拍素材，配合诗意文本，探讨温柔、距离与融合的关系。
 
-**[点击体验 →](./gentle-pot/index.html)**
+**{{< site-link key="gentle_pot_zh" text="点击体验 →" >}}**
 
 ---
 

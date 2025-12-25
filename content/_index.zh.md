@@ -1,0 +1,21 @@
+---
+title: "gameai.one"
+layout: "home"
+---
+
+# gameai.one
+
+一个人。  
+一锅温柔。  
+一个游戏。  
+一个梦。
+
+深度思考，沉淀 AI 与游戏的认知坐标，探索进化路径。
+
+---
+
+## 导航
+
+- [思考]({{< relref "thoughts/_index.md" >}})：沉淀方法论与长期视角
+- [作品]({{< relref "works/_index.md" >}})：互动体验与实验项目
+- [关于]({{< relref "about/_index.md" >}})：创作者与愿景
