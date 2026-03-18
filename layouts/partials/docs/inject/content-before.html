@@ -1,0 +1,12 @@
+{{- /*
+  Optional disclosure block (metadata-only).
+  Set per page via front matter: disclosure: "..."
+*/ -}}
+{{- if and .IsPage (ne .Kind "home") -}}
+  {{- with .Params.disclosure -}}
+    <div class="text-small" style="margin: 0.5rem 0 1rem; padding: 0.75rem 1rem; border: 1px solid rgba(0,0,0,0.08); border-radius: 0.5rem;">
+      {{ . | markdownify }}
+    </div>
+  {{- end -}}
+{{- end -}}
+

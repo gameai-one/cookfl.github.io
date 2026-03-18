@@ -3,6 +3,16 @@ defaultContentLanguage: "en"
 title: "GameAI.One"
 theme: "hugo-book"
 
+params:
+  contactEmail: "hello@gameai.one"
+  contentLicenseName: "CC BY 4.0"
+  contentLicenseUrl: "https://creativecommons.org/licenses/by/4.0/"
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
+  series: "series"
+
 languages:
   en:
     languageName: "English"

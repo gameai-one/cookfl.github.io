@@ -1,0 +1,72 @@
+{{- /*
+  Publishing meta block (metadata-only).
+  Shows canonical link, license, optional DOI, and contact email.
+*/ -}}
+{{- if and .IsPage (ne .Kind "home") -}}
+  {{- $show := default true .Params.showPublishMeta -}}
+  {{- if $show -}}
+    {{- $lang := .Site.Language.Lang -}}
+    {{- $canonical := default .Permalink .Params.canonical -}}
+    {{- $licenseName := default "CC BY 4.0" .Site.Params.contentLicenseName -}}
+    {{- $licenseUrl := default "https://creativecommons.org/licenses/by/4.0/" .Site.Params.contentLicenseUrl -}}
+    {{- $contactEmail := default "" .Site.Params.contactEmail -}}
+
+    <hr>
+    <div class="text-small">
+      {{- if eq $lang "zh" -}}
+        <div><strong>权威链接</strong>：<a href="{{ $canonical | safeURL }}">{{ $canonical }}</a></div>
+        {{- with .Params.version -}}
+          <div><strong>版本</strong>：{{ . }}</div>
+        {{- end -}}
+        {{- with .Params.doi -}}
+          <div><strong>DOI</strong>：{{ . }}</div>
+        {{- end -}}
+        <div><strong>许可</strong>：<a href="{{ $licenseUrl | safeURL }}">{{ $licenseName }}</a></div>
+        <div>
+          <strong>引用</strong>：
+          <code>{{ .Site.Params.author }}（{{ .Date.Format "2006-01-02" }}）《{{ .Title }}》GameAI.one：{{ $canonical }}</code>
+        </div>
+        {{- if $contactEmail -}}
+          <div><strong>更正/侵权联系</strong>：<a href="mailto:{{ $contactEmail }}">{{ $contactEmail }}</a></div>
+        {{- end -}}
+      {{- else -}}
+        <div><strong>Canonical</strong>: <a href="{{ $canonical | safeURL }}">{{ $canonical }}</a></div>
+        {{- with .Params.version -}}
+          <div><strong>Version</strong>: {{ . }}</div>
+        {{- end -}}
+        {{- with .Params.doi -}}
+          <div><strong>DOI</strong>: {{ . }}</div>
+        {{- end -}}
+        <div><strong>License</strong>: <a href="{{ $licenseUrl | safeURL }}">{{ $licenseName }}</a></div>
+        <div>
+          <strong>Cite</strong>:
+          <code>{{ .Site.Params.author }} ({{ .Date.Format "2006-01-02" }}). {{ .Title }}. GameAI.one. {{ $canonical }}</code>
+        </div>
+        {{- if $contactEmail -}}
+          <div><strong>Corrections / Abuse</strong>: <a href="mailto:{{ $contactEmail }}">{{ $contactEmail }}</a></div>
+        {{- end -}}
+      {{- end -}}
+
+      {{- $zhihuFirst := default false .Params.zhihuFirst -}}
+      {{- $zhihuAuthorProvided := ne (default "" .Params.zhihuAuthor) "" -}}
+      {{- $zhihuUrlProvided := ne (default "" .Params.zhihuUrl) "" -}}
+      {{- if or $zhihuFirst $zhihuAuthorProvided $zhihuUrlProvided -}}
+        {{- $zhihuAuthor := default "[your Zhihu ID]" .Params.zhihuAuthor -}}
+        {{- $zhihuUrl := default "<your Zhihu post URL>" .Params.zhihuUrl -}}
+        {{- $version := default "v1.0" .Params.version -}}
+        {{- $date := .Date.Format "2006-01-02" -}}
+        <details class="text-small" style="margin-top: 0.75rem;">
+          <summary><strong>知乎尾注（复制粘贴用）</strong></summary>
+          <pre><code>作者：{{ $zhihuAuthor }}
+首发：{{ if (default false .Params.zhihuFirst) }}知乎（{{ $zhihuUrl }}）{{ else }}{{ $canonical }}{{ end }}
+转载须知：署名 + 保留原文链接（{{ $licenseName }}）
+勘误与更新：以本文为准｜{{ $version }} / {{ $date }}</code></pre>
+          <pre><code>Author: {{ $zhihuAuthor }}
+First published: {{ if (default false .Params.zhihuFirst) }}Zhihu ({{ $zhihuUrl }}){{ else }}{{ $canonical }}{{ end }}
+Reprint policy: attribution + keep original link ({{ $licenseName }})
+Errata &amp; updates: this post is authoritative | {{ $version }} / {{ $date }}</code></pre>
+        </details>
+      {{- end -}}
+    </div>
+  {{- end -}}
+{{- end -}}
