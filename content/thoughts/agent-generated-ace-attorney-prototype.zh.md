@@ -2,7 +2,7 @@
 title: "我用 Agent 架构自动生成了一个逆转裁判风格的互动推理原型"
 subtitle: "从内部 run 到 itch.io 公开页面，一次可交互案件的自动化生产"
 date: 2026-03-21
-draft: true
+draft: false
 tags: ["多Agent", "Agent工程", "互动叙事", "游戏原型", "工程复盘"]
 series: ["vibegauge-narratives"]
 translationKey: "agent-generated-ace-attorney-prototype"
