@@ -2,7 +2,7 @@
 title: "Why an AI Keeps Rechecking the Door Lock"
 subtitle: "Door-Lock Rechecking: one harmless repeat, one out-of-bounds contamination"
 date: 2026-02-23
-draft: true
+draft: false
 tags: ["agentic-systems", "multi-agent", "reliability", "protocols", "observability", "engineering"]
 translationKey: "door-lock-rechecking"
 version: "v1.0"
@@ -208,4 +208,3 @@ implementation details are omitted.*
 about internal model mechanisms. In this post, "emergent" only means the
 behavior appeared without an explicit instruction; it does not imply intent or
 consciousness.*
-

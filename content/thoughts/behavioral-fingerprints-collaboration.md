@@ -2,7 +2,7 @@
 title: "54 Multi-Agent Runs Under One Fixed Protocol: Behavioral Fingerprints and a Coordination Blind Spot"
 subtitle: "Protocol compliance, failure modes, and why observability depth matters"
 date: 2026-02-18
-draft: true
+draft: false
 tags: ["agentic-systems", "multi-agent", "observability", "protocols", "governance"]
 translationKey: "behavioral-fingerprints-collaboration"
 version: "v1.0"
