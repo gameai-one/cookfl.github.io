@@ -2,14 +2,11 @@
 title: "我们花了两三周调试一个不该存在的功能"
 subtitle: "公理污染：当实现反向定义正确"
 date: 2026-01-31
-draft: true
+draft: false
 tags: ["游戏开发", "工程管理", "敏捷", "原型", "需求", "技术债务"]
 series: ["axiom-contamination"]
 version: "v1.0"
 translationKey: "axiom-contamination"
-zhihuFirst: true
-zhihuAuthor: "[你的知乎ID]"
-zhihuUrl: ""
 ---
 
 # 我们花了两三周调试一个不该存在的功能

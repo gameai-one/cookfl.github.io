@@ -2,7 +2,7 @@
 title: "同一套多智能体协议跑了 54 次：协作“行为指纹”与一个协调盲区"
 subtitle: "协议合规、失败模式，以及为什么可观测性“分辨率”决定排障速度"
 date: 2026-02-18
-draft: true
+draft: false
 tags: ["多智能体", "Agent", "可观测性", "协议", "工程复盘", "治理"]
 translationKey: "behavioral-fingerprints-collaboration"
 version: "v1.0"

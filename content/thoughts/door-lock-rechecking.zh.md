@@ -2,7 +2,7 @@
 title: "AI 为什么会反复“拧门锁”"
 subtitle: "Door-Lock Rechecking：一次无害重复，一次越界污染"
 date: 2026-02-23
-draft: true
+draft: false
 tags: ["多智能体", "Agent", "工程复盘", "可靠性", "协议", "可观测性"]
 translationKey: "door-lock-rechecking"
 version: "v1.0"
@@ -182,4 +182,3 @@ prompt 去修正它。
 *认识论声明：本文所有“门锁类比”是人类叙事框架，不是对 LLM 内部机制的断言。“涌现”
 一词在本文中仅用于描述“prompt 中无指令的情况下出现的行为模式”，不主张意向性或意
 识。*
-
