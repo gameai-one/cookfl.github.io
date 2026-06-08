@@ -1,7 +1,9 @@
 /public/
 /resources/_gen/
 /.hugo_build.lock
-/.DS_Store
+.DS_Store
+.codex/
+CLAUDE.md
 # 忽略主题的 .git 目录（如果你用 git submodule add 方式添加主题）
 /themes/*/
 # macOS特有
